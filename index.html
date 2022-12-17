@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spotify Premium</title>
+  <link rel="stylesheet" href="./src/css/style.css">
+  <script defer src="./src/js/main.js"></script>
+</head>
+
+<body>
+  <!--
+768 cambia por que premium y footer,
+992 cambia menu y footer,
+1200 cambia por que premium y planes.
+-->
+  <header class="header">
+    <a class="header__link" href="#">
+      <img class="header__img" src="_./src/images/svg/spotify-logo.svg" alt="spotify logo">
+    </a>
+    <div class="header__">
+      <button class="header__btn header__btn--open">
+        <img class="header__icon" src="_./src/images/svg/menu.svg" alt="menu icon">
+      </button>
+      <button class="header__btn header__btn--close">
+        <img class="header__icon" src="_./src/images/svg/close-icon.svg" alt="cross icon">
+      </button>
+    </div>
+    <nav class="header__nav nav">
+      <ul class="nav__ul">
+        <li class="nav__li"><a class="nav__link" href="#">Premium</a></li>
+        <li class="nav__li"><a class="nav__link" href="#">Ayuda</a></li>
+        <li class="nav__li"><a class="nav__link" href="#">Descargar</a></li>
+        <li class="nav__li nav__li--divider">|</li>
+        <li class="nav__li"><a class="nav__link nav__link--grey" href="#">Regístrate</a></li>
+        <li class="nav__li"><a class="nav__link nav__link--grey" href="#">Iniciar sesión</a></li>
+        <a class="header__link header__link--nav" href="#">
+          <img class="header__img header__img--nav" src="_./src/images/svg/spotify-logo.svg" alt="spotify logo">
+        </a>
+      </ul>
+    </nav>
+  </header>
+  <main class="main">
+    <section class="promo">
+      <div class="promo__info">
+        <h1 class="promo__title">3 meses de Premium por $0,00</h1>
+        <p class="promo__paragraph">Disfruta de música sin anuncios, reproducción en modo offline y mucho más. Cancela
+          cuando quieras.</p>
+        <ul class="promo__links">
+          <li class="promo__btn promo__btn--cta">
+            <a class="promo__link" href="#" title="obtener">Obtén 3 meses por $0,00</a>
+          </li>
+          <li class="promo__btn">
+            <a class="promo__link" href="#" title="planes">Ver planes</a>
+          </li>
+        </ul>
+        <span class="promo__exp">Solo para el plan Individual. Después, cuesta $ 4.150,00 al mes. <a href="#"
+            title="términos y condiciones">Se aplican Términos y
+            Condiciones</a>. Disponible solo para usuarios que todavía no han probado Premium. La oferta termina el
+          <time datetime="2022-12-31">31-12-22</time>.</span>
+      </div>
+      <img src="_./src/images/spotify-face.jpeg" alt="spotify face">
+    </section>
+    <section class="why">
+      <h2 class="why__title">¿Por qué cambiarse a Premium?</h2>
+      <div class="why__wrapper">
+        <div class="why__card">
+          <img class="why__img" src="_./src/images/download-music.png" alt="illustration">
+          <div class="why__info">
+            <h3 class="why__title why__title--info">Descarga tu música.</h3>
+            <p class="why__paragraph">Escúchala desde cualquier lugar.</p>
+          </div>
+        </div>
+        <div class="why__card">
+          <img class="why__img" src="_./src/images/phone-alert.png" alt="illustration">
+          <div class="why__info">
+            <h3 class="why__title why__title--info">Escucha música sin anuncios.</h3>
+            <p class="why__paragraph">Disfruta de tu música sin interrupciones.</p>
+          </div>
+        </div>
+        <div class="why__card">
+          <img class="why__img" src="_./src/images/music.png" alt="illustration">
+          <div class="why__info">
+            <h3 class="why__title why__title--info">Reproduce lo que quieras.</h3>
+            <p class="why__paragraph">ncluso en dispositivos móviles.</p>
+          </div>
+        </div>
+        <div class="why__card">
+          <img class="why__img" src="_./src/images/phone-play.png" alt="illustration">
+          <div class="why__info">
+            <h3 class="why__title why__title--info">Salta canciones de forma ilimitada.</h3>
+            <p class="why__paragraph">Solo pasa a la siguiente.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="plans">
+      <div class="plans__info">
+        <h2 class="plans__title">Elije tu plan Premium</h2>
+        <p class="plans__paragraph">Escucha sin límites en tu teléfono, tus altavoces y otros dispositivos.</p>
+      </div>
+      <div class="plans__wrapper">
+        <div class="plans__card card">
+          <ul class="card__ul">
+            <li class="card__li"
+              data-title="Obtén 3 meses por $0,00 $4.150,00 al mes después de la oferta. Solo para suscriptores a Spotify Premium por primera vez. Cancela cuando quieras.">
+              3
+              meses gratis</li>
+            <li class="card__li card__li--category">planes prepago disponibles</li>
+          </ul>
+          <div class="card__info">
+            <h3 class="card__title">Individual</h3>
+            <p class="card__paragraph">Después del período de la oferta, $ 4.150,00 al mes</p>
+            <p class="card__paragraph">1 cuenta</p>
+          </div>
+          <span class="card__divider"></span>
+          <ul class="card__ul card__ul--youcan">
+            <li class="card__li">
+              <img src="" alt="check icon" class="card__img">
+              <p class="card__paragraph">Escucha música sin anuncios</p>
+            </li>
+            <li class="card__li">
+              <img src="" alt="check icon" class="card__img">
+              <p class="card__paragraph">Reproduce tus canciones en cualquier lugar, incluso sin conexión</p>
+            </li>
+            <li class="card__li">
+              <img src="" alt="check icon" class="card__img">
+              <p class="card__paragraph">eproducción on-demand</p>
+            </li>
+          </ul>
+          <a class="card__cta" href="#" title="empezar">Empezar</a>
+          <span class="card__exp">Solo para el plan Individual. Después, cuesta $ 4.150,00 al mes. <a href="#"
+              title="términos y condiciones">Se aplican Términos y
+              Condiciones</a>. Disponible solo para usuarios que todavía no han probado Premium. La oferta termina el
+            <time datetime="2022-12-31">31-12-22</time>.
+          </span>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <img src="_./src/images/svg/spotify-logo.svg" alt="spotify logo" class="footer__logo">
+    <ul class="footer__ul">
+      <ul class="footer__links">
+        <li class="footer__li footer__li--title">compañía</li>
+        <li class="footer__li">
+          <a href="#" class="footer__link">Acerda de</a>
+        </li>
+        <li class="footer__li">
+          <a href="#" class="footer__link">Empleo</a>
+        </li>
+        <li class="footer__li">
+          <a href="#" class="footer__link">For the Record</a>
+        </li>
+      </ul>
+      <ul class="footer__links">
+        <li class="footer__li footer__li--title">comunidades</li>
+        <li class="footer__li">
+          <a href="#" class="footer__link">Servicios para artistas</a>
+        </li>
+        <li class="footer__li">
+          <a href="#" class="footer__link">Desarolladores</a>
+        </li>
+        <li class="footer__li">
+          <a href="#" class="footer__link">Publicidad</a>
+        </li>
+        <li class="footer__li">
+          <a href="#" class="footer__link">Inversionistas</a>
+        </li>
+        <li class="footer__li">
+          <a href="#" class="footer__link">Proveedores</a>
+        </li>
+      </ul>
+      <ul class="footer__links">
+        <li class="footer__li footer__li--title">Enlaces útiles</li>
+        <li class="footer__li">
+          <a href="#" class="footer__link">Ayuda</a>
+        </li>
+        <li class="footer__li">
+          <a href="#" class="footer__link">Reproductor web</a>
+        </li>
+        <li class="footer__li">
+          <a href="#" class="footer__link">App móvil gratis</a>
+        </li>
+      </ul>
+    </ul>
+    <div class="footer__social">
+      <img src="_./src/images/svg/instagram-icon.svg" alt="instagram icon" class="footer__img">
+      <img src="_./src/images/svg/twiiter-icon.svg" alt="twiiter icon" class="footer__img">
+      <img src="_./src/images/svg/facebook-icon.svg" alt="facebook icon" class="footer__img">
+    </div>
+    <a href="#" class="footer__location">
+      <img class="footer__img--location" src="_./src/images/svg/earth.svg" alt="earth icon">
+      <span class="footer__country">Chile</span>
+    </a>
+    <div class="footer__legal legal">
+      <ul class="legal__ul">
+        <li class="legal__li">Legal</li>
+        <li class="legal__li">Centro de privacidad</li>
+        <li class="legal__li">Política de privacidad</li>
+        <li class="legal__li">Cookies</li>
+        <li class="legal__li">Sobre los anuncios</li>
+      </ul>
+      <span class="legal__copy">© 2022 Spotify AB</span>
+    </div>
+  </footer>
+</body>
+
+</html>
