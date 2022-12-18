@@ -13,7 +13,7 @@ body {
 }
 
 .header {
-  @include flexBox($fd: row, $jc: space-between);
+  @include flexBox($ff: row nowrap, $jc: space-between);
   width: 100%;
   height: 3.5em;
   background-color: $dark;
@@ -93,6 +93,7 @@ body {
 
 .main {
   @include flexBox;
+  width: 100%;
 }
 
 .promo {
@@ -101,6 +102,7 @@ body {
   color: $light;
   gap: 1em;
   padding: 3em 1em 4em;
+  width: 100%;
 
   &__info {
     @include flexBox;
@@ -148,5 +150,271 @@ body {
     max-width: 21em;
     min-height: 16.5em;
     background-color: $links-hover;
+  }
+}
+
+.why {
+  @include flexBox;
+  padding: 2.5em 1em 4em;
+  background-color: $light;
+  gap: 2em;
+  width: 100%;
+
+  &__title {
+    font-size: 1.5em;
+    font-weight: 800;
+    text-align: center;
+  }
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    justify-content: center;
+    align-items: center;
+    grid-auto-rows: 9em;
+    width: 100%;
+  }
+
+  &__card {
+    @include flexBox($ff: row nowrap, $ai: start);
+    width: 18em;
+    height: 100%;
+  }
+
+  &__img {
+    width: 50%;
+    height: 100%;
+  }
+
+  &__info {
+    @include flexBox($ai: start);
+    width: 100%;
+    height: 100%;
+    padding: 2em 1em;
+    gap: 1em;
+    line-height: 1.6em;
+  }
+
+  &__title--info {
+    @include flexBox($ai: start);
+    text-align: start;
+    font-size: 1.1em;
+    font-weight: 700;
+  }
+
+  &__paragraph {
+    font-size: 0.8em;
+    font-weight: 600;
+  }
+}
+
+.plans {
+  @include flexBox;
+  gap: 4em;
+  padding: 2em 1em 4em;
+
+  &__info {
+    @include flexBox;
+    gap: 0.5em;
+    text-align: center;
+  }
+
+  &__title {
+    font-size: 1.7em;
+    font-weight: 700;
+  }
+
+  &__paragraph {
+    font-size: 0.9em;
+    font-weight: 600;
+    line-height: 1.4em;
+  }
+
+  &__wrapper {
+    @include flexBox;
+    gap: 1em;
+  }
+}
+
+.card {
+  background-color: $light;
+  border-radius: 0.8em;
+  box-shadow: 0 0 0.6em $shadow;
+  padding: 1.2em;
+
+  &__ul {
+    @include flexBox($ff: row wrap, $jc: start);
+    gap: 0.6em;
+  }
+
+  &__ul--youcan {
+    padding: 1.6em 0;
+  }
+
+  &__li {
+    border-radius: 0.3em;
+    background-color: $accent;
+    padding: 0.5em 0.5em;
+    font-weight: 700;
+    font-size: 0.8em;
+    color: $light;
+
+    &--category {
+      color: $accent;
+      background-color: transparent;
+      border: 1px solid $accent;
+    }
+  }
+
+  &__li--youcan {
+    background-color: unset;
+    color: unset;
+    font-size: unset;
+    font-weight: unset;
+    @include flexBox($ff: row nowrap, $jc: start, $ai: start);
+    padding: 0;
+    gap: 0.6em;
+  }
+
+  &__info {
+    @include flexBox($ai: start);
+    padding: 1em 0;
+  }
+
+  &__title {
+    font-size: 1.4em;
+    font-weight: 700;
+  }
+
+  &__paragraph {
+    font-size: 0.9em;
+    font-weight: 500;
+    line-height: 1.6em;
+  }
+
+  &__divider {
+    @include flexBox;
+    border-bottom: 2px solid $dark;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__img {
+    width: 24px;
+  }
+
+  &__cta {
+    @include btn($bg: $cta-bg);
+  }
+
+  &__exp {
+    display: block;
+    font-size: 0.7em;
+    font-weight: 500;
+    color: $text;
+    line-height: 1.4em;
+    margin-top: 1.5em;
+    a {
+      text-decoration: underline;
+    }
+  }
+}
+
+.footer {
+  background-color: $dark;
+  @include flexBox($ai: start);
+  width: 100%;
+  color: $light;
+  gap: 2em;
+  padding: 3em 1em 2em;
+
+  &__logo {
+    @include flexBox;
+    width: 6.5em;
+    height: 3.5em;
+    padding: 1em;
+  }
+
+  &__ul {
+    @include flexBox($ff: row wrap, $ai: start);
+    width: 100%;
+    gap: 3em;
+  }
+
+  &__links {
+    @include flexBox($ai: start);
+    width: 100%;
+    gap: 1.8em;
+  }
+
+  &__li {
+    width: 100%;
+    font-size: 0.9em;
+    font-weight: 600;
+  }
+
+  &__li--title {
+    text-transform: uppercase;
+    color: $text;
+    font-size: 0.8em;
+    font-weight: 800;
+  }
+
+  &__social {
+    @include flexBox($ff: row nowrap, $jc: start);
+    width: 100%;
+    gap: 1em;
+  }
+
+  &__img {
+    width: 2.5em;
+    height: 2.5em;
+    margin-top: 7em;
+    background-color: $social;
+    border-radius: 5em;
+    padding: 0.5em;
+  }
+
+  &__img--location {
+    width: 1em;
+    height: 1em;
+  }
+
+  &__location {
+    @include flexBox($ff: row nowrap, $jc: end);
+    color: $text;
+    width: 100%;
+  }
+
+  &__country {
+    font-size: 0.6em;
+  }
+}
+
+.legal {
+  @include flexBox($ff: row nowrap, $ai: start);
+  width: 100%;
+
+  &__ul {
+    @include flexBox($ff: row wrap, $jc: start);
+    gap: 2em;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__li {
+    @include flexBox;
+  }
+
+  &__link {
+    font-size: 0.6em;
+    color: $text;
+  }
+
+  &__copy {
+    font-size: 0.6em;
+    color: $text;
+    width: 16em;
+    height: 100%;
   }
 }

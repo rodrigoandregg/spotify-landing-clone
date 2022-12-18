@@ -1,11 +1,11 @@
-@mixin flexBox($fd: column, $jc: center, $ai: center) {
+@mixin flexBox($ff: column nowrap, $jc: center, $ai: center) {
   display: flex;
-  flex-direction: $fd;
+  flex-flow: $ff;
   justify-content: $jc;
   align-items: $ai;
 }
 
-@mixin btn($bg: $dark, $brdr: $dark, $clr: $text) {
+@mixin btn($bg: $dark, $brdr: $dark, $clr: $light) {
   @include flexBox;
   padding: 1em 2em;
   font-size: 0.9em;
