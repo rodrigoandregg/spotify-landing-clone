@@ -1,11 +1,5 @@
-@font-face {
-  font-family: "meslolgs_nfregular";
-  src: url("meslolgs_nf_regular-webfont.woff2") format("woff2"),
-    url("meslolgs_nf_regular-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-$main-font: "meslolgs_nfregular", sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+$main-font: "Montserrat", sans-serif;
 
 $light: #ffffff;
 $dark: #000000;
@@ -13,7 +7,7 @@ $cta-bg: #121212;
 $links-hover: #1ed760;
 $shadow: #3e3c493d;
 $main-bg: #efefef;
-$section-bg: #df0c8b;
+$promo-bg: #df0c8b;
 $accent: #0d72ea;
 $social: #222326;
-$text: #919483;
+$text: #d9dadc;

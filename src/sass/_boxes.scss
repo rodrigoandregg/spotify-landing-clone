@@ -4,3 +4,16 @@
   justify-content: $jc;
   align-items: $ai;
 }
+
+@mixin btn($bg: $dark, $brdr: $dark, $clr: $text) {
+  @include flexBox;
+  padding: 1em 2em;
+  font-size: 0.9em;
+  font-weight: 600;
+  text-transform: uppercase;
+  background-color: $bg;
+  border: 2px solid $brdr;
+  border-radius: 50em;
+  width: 100%;
+  color: $clr;
+}

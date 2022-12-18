@@ -1,5 +1,152 @@
 @import "reset";
 @import "boxes";
 
+/*
+768 cambia por que premium y footer,
+992 cambia menu y footer,
+1200 cambia por que premium y planes.
+*/
+
 body {
+  background-color: $main-bg;
+  width: 100%;
+}
+
+.header {
+  @include flexBox($fd: row, $jc: space-between);
+  width: 100%;
+  height: 3.5em;
+  background-color: $dark;
+  color: $light;
+
+  &__link {
+    @include flexBox;
+    width: 6.5em;
+    height: 3.5em;
+    padding: 1em;
+  }
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    position: relative;
+    width: 3.5em;
+    height: 3.5em;
+    z-index: 1;
+  }
+
+  &__btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 0.8em;
+  }
+
+  &__icon {
+    width: 100%;
+    height: 100%;
+  }
+
+  &__link--nav {
+    justify-self: end;
+    height: 3em;
+  }
+}
+
+.nav {
+  @include flexBox($ai: start);
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  background-color: $dark;
+  padding: 2.4em;
+  display: none;
+
+  &__ul {
+    @include flexBox($jc: start, $ai: start);
+    height: 100%;
+    width: 100%;
+    gap: 1.5em;
+  }
+
+  &__li--divider {
+    border-bottom: 2px solid $light;
+    width: 1.2em;
+    margin: 1em 0;
+  }
+
+  &__link {
+    font-size: 1.6em;
+    font-weight: 700;
+  }
+
+  &__link--grey {
+    color: $text;
+    font-size: 1.3em;
+    font-weight: 600;
+  }
+}
+
+.main {
+  @include flexBox;
+}
+
+.promo {
+  @include flexBox;
+  background-color: $promo-bg;
+  color: $light;
+  gap: 1em;
+  padding: 3em 1em 4em;
+
+  &__info {
+    @include flexBox;
+    gap: 1.2em;
+  }
+
+  &__title {
+    font-size: 1.4em;
+    font-weight: 700;
+    line-height: 1.2em;
+  }
+
+  &__paragraph {
+    font-weight: 500;
+    line-height: 1.6em;
+  }
+
+  &__links {
+    @include flexBox;
+    gap: 0.6em;
+    width: 100%;
+  }
+
+  &__btn {
+    @include btn($clr: $text);
+  }
+
+  &__btn--plans {
+    @include btn($bg: transparent, $brdr: $light, $clr: $light);
+  }
+
+  &__exp {
+    font-size: 0.7em;
+    font-weight: 500;
+    padding: 2em 0;
+
+    a {
+      text-decoration: underline;
+    }
+  }
+
+  &__img {
+    min-width: 16.5em;
+    width: 16.5em;
+    max-width: 21em;
+    min-height: 16.5em;
+    background-color: $links-hover;
+  }
 }
