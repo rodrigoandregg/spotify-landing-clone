@@ -112,11 +112,6 @@ body {
   color: #000000;
 }
 
-/*
-768 cambia por que premium y footer,
-992 cambia menu y footer,
-1200 cambia por que premium y planes.
-*/
 body {
   background-color: #efefef;
   width: 100%;
@@ -139,7 +134,7 @@ body {
   align-items: center;
   width: 6.5em;
   height: 3.5em;
-  padding: 1em;
+  padding: 0.3em;
 }
 .header__wrapper {
   display: grid;
@@ -157,6 +152,10 @@ body {
   left: 0;
   padding: 0.8em;
 }
+.header__btn--close {
+  padding: 1.2em;
+  display: none;
+}
 .header__icon {
   width: 100%;
   height: 100%;
@@ -171,14 +170,15 @@ body {
   flex-flow: column nowrap;
   justify-content: center;
   align-items: start;
+  overflow: hidden;
+  background-color: #000000;
   position: absolute;
-  right: 0;
   top: 0;
   bottom: 0;
-  left: 0;
-  background-color: #000000;
-  padding: 2.4em;
-  display: none;
+  right: 0;
+  width: 0vw;
+  opacity: 0;
+  transition: all 0.3s linear;
 }
 .nav__ul {
   display: flex;
@@ -202,6 +202,13 @@ body {
   color: #acacac;
   font-size: 1.3em;
   font-weight: 600;
+}
+
+.active {
+  width: 100vw;
+  justify-content: center;
+  padding: 4em 2.4em;
+  opacity: 1;
 }
 
 .main {
@@ -229,8 +236,10 @@ body {
   justify-content: center;
   align-items: center;
   gap: 1.2em;
+  width: 100%;
 }
 .promo__title {
+  width: 100%;
   font-size: 1.4em;
   font-weight: 700;
   line-height: 1.2em;
@@ -238,6 +247,8 @@ body {
 .promo__paragraph {
   font-weight: 500;
   line-height: 1.6em;
+  text-align: start;
+  width: 100%;
 }
 .promo__links {
   display: flex;
@@ -321,12 +332,11 @@ body {
   flex-flow: row nowrap;
   justify-content: center;
   align-items: start;
-  width: 18em;
+  width: 100%;
   height: 100%;
 }
 .why__img {
-  width: 50%;
-  height: 100%;
+  width: 6em;
 }
 .why__info {
   display: flex;
@@ -592,6 +602,95 @@ body {
   color: #acacac;
   width: 16em;
   height: 100%;
+}
+
+/*
+768 cambia promo links, why y footer,
+992 cambia menu y footer,
+1200 cambia why y planes.
+*/
+@media (min-width: 768px) {
+  .promo__links {
+    flex-flow: row nowrap;
+    justify-content: start;
+  }
+  .promo__btn {
+    width: unset;
+  }
+  .why__wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .footer__ul {
+    flex-flow: row nowrap;
+  }
+}
+@media (min-width: 992px) {
+  .header {
+    padding: 2em;
+  }
+  .header__link--nav {
+    display: none;
+  }
+  .header__wrapper {
+    display: none;
+  }
+  .nav {
+    display: flex;
+    position: relative;
+    padding: 0;
+    align-items: center;
+    width: 60%;
+    height: 1.2em;
+  }
+  .nav__ul {
+    flex-flow: row nowrap;
+    gap: 1em;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .nav__li--divider {
+    border-bottom: none;
+    border-left: 1px solid #ffffff;
+    height: 1em;
+    margin: 0 1em;
+  }
+  .nav__link {
+    font-size: 1em;
+    font-weight: 600;
+  }
+  .promo__exp {
+    width: 70%;
+    align-self: start;
+  }
+  .why__wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 1200px) {
+  .promo {
+    flex-flow: row nowrap;
+  }
+  .why__wrapper {
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 15em;
+  }
+  .why__card {
+    flex-flow: column nowrap;
+    text-align: center;
+    align-items: center;
+  }
+  .why__title--info {
+    text-align: center;
+    align-items: center;
+    width: 100%;
+  }
+  .why__paragraph {
+    text-align: center;
+    align-self: center;
+  }
+  .plans__wrapper {
+    flex-flow: row nowrap;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
